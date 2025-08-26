@@ -5,7 +5,10 @@
   "name": "F3 Lite",
   "description": "F3 Lite is a lightweight HUD overlay that gives you the most important debug info — without cluttering your screen with the full F3 menu.",
   "authors": ["Vinay Pandya"],
-  "contact": {},
+  "contact": {
+    "homepage": "https://github.com/imVinayPandya/f3lite",
+    "sources": "https://github.com/imVinayPandya/f3lite"
+  },
   "license": "MIT",
   "icon": "assets/f3lite/icon.png",
   "environment": "client",
