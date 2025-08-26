@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "f3lite",
+  "version": "${version}",
+  "name": "F3 Lite",
+  "description": "F3 Lite is a lightweight HUD overlay that gives you the most important debug info — without cluttering your screen with the full F3 menu.",
+  "authors": ["Vinay Pandya"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/f3lite/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "in.vinaypandya.f3lite.client.F3liteDataGenerator"
+    ],
+    "client": [
+      "in.vinaypandya.f3lite.client.F3liteClient"
+    ],
+    "main": [
+      "in.vinaypandya.f3lite.F3lite"
+    ]
+  },
+  "mixins": [
+    "f3lite.mixins.json",
+    {
+      "config": "f3lite.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
