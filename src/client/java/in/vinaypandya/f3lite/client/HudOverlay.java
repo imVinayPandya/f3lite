@@ -44,7 +44,7 @@ public class HudOverlay {
         // }
 
         // Smooth position & rotation
-        Vec3d p = client.player.getPos();
+        Vec3d p = client.player.getEntityPos();
         double xi = p.x, yi = p.y, zi = p.z;
         float yawi = client.player.getYaw();
         float pitchi = client.player.getPitch();
@@ -55,7 +55,9 @@ public class HudOverlay {
         int chunkZ = pos.getZ() >> 4;
 
         String biome = client.world.getBiome(pos)
-                .getKey().map(k -> k.getValue().toString()).orElse("unknown");
+                .getKey()
+                .map(k -> k.getValue().getPath().toUpperCase())
+                .orElse("unknown");
 
         int fps = client.getCurrentFps();
 
